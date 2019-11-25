@@ -358,9 +358,9 @@
     <string name="dbmanagementactivity_overwrite">Escrever por cima</string>
     <string name="Cancel">Cancelar</string>
     <string name="Delete">Apagar</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">Vibração</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="title_activity_pebble_pairing">A emparelhar Pebble</string>
     <string name="pebble_pairing_hint">É esperado que veja uma notificação de emparelhamento no seu dispositivo Android. Se isso não acontecer, aceda às notificações e aceite o pedido de emparelhamento. Depois aceite igualmente o pedido de emparelhamento no seu Pebble</string>
     <string name="weather_notification_label">Garanta que este tema se encontra ativado na Aplicação de Meteorologia para obter informação meteorológica atualizada no seu Pebble.\n\nNão é necessária qualquer configuração aqui.\n\nPode ativar a aplicação nativa de meteorologia do seu Pebble através da gestão de aplicações.\n\nTemas de relógio irão apresentar a informação meteorológica automaticamente.</string>

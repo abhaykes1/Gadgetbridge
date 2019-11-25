@@ -17,12 +17,15 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 package nodomain.freeyourgadget.gadgetbridge.adapter;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.text.InputType;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
@@ -47,6 +50,8 @@ import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 import nodomain.freeyourgadget.gadgetbridge.GBApplication;
@@ -63,14 +68,17 @@ import nodomain.freeyourgadget.gadgetbridge.impl.GBDevice;
 import nodomain.freeyourgadget.gadgetbridge.model.BatteryState;
 import nodomain.freeyourgadget.gadgetbridge.model.DeviceType;
 import nodomain.freeyourgadget.gadgetbridge.model.RecordedDataTypes;
+import nodomain.freeyourgadget.gadgetbridge.newHeart;
 import nodomain.freeyourgadget.gadgetbridge.util.DeviceHelper;
 import nodomain.freeyourgadget.gadgetbridge.util.GB;
 
 /**
  * Adapter for displaying GBDevice instances.
  */
-public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.ViewHolder> {
+public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.ViewHolder>
+        implements ActivityCompat.OnRequestPermissionsResultCallback {
 
+    private  static final int REQUEST_CALL = 1;
     private final Context context;
     private List<GBDevice> deviceList;
     private int expandedDevicePosition = RecyclerView.NO_POSITION;
@@ -240,6 +248,37 @@ public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.Vi
                                                          }
                                                      }
         );
+
+        //show heart rate
+        holder.myHeartRate.setVisibility(coordinator.supportsActivityTracking() ? View.VISIBLE : View.GONE);
+        holder.myHeartRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent;
+                startIntent = new Intent(context, newHeart.class);
+                context.startActivity(startIntent);
+            }
+        });
+
+        //show sleep data
+        holder.SleepData.setVisibility(coordinator.supportsActivityTracking() ? View.VISIBLE : View.GONE);
+        holder.SleepData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(context, newSleep.class);
+                context.startActivity(startIntent);
+            }
+        });
+
+        //call doctor
+        holder.ContactDoctor.setVisibility(coordinator.supportsActivityTracking() ? View.VISIBLE : View.GONE);
+        holder.ContactDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makePhoneCall();
+                Toast.makeText(context,"Calling Doctor",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //show activity tracks
         holder.showActivityTracks.setVisibility(coordinator.supportsActivityTracks() ? View.VISIBLE : View.GONE);
@@ -498,7 +537,9 @@ public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.Vi
         ImageView showActivityGraphs;
         ImageView showActivityTracks;
         ImageView calibrateDevice;
-
+        ImageView myHeartRate;
+        ImageView SleepData;
+        ImageView ContactDoctor;
         ImageView deviceInfoView;
         //overflow
         final RelativeLayout deviceInfoBox;
@@ -533,6 +574,10 @@ public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.Vi
             deviceInfoView = view.findViewById(R.id.device_info_image);
             calibrateDevice = view.findViewById(R.id.device_action_calibrate);
 
+            //added feature
+            myHeartRate = view.findViewById(R.id.getHeart);
+            SleepData = view.findViewById(R.id.sleepBtn);
+            ContactDoctor = view.findViewById(R.id.contact);
             deviceInfoBox = view.findViewById(R.id.device_item_infos_box);
             //overflow
             deviceInfoList = view.findViewById(R.id.device_item_infos);
@@ -604,5 +649,26 @@ public class GBDeviceAdapterv2 extends RecyclerView.Adapter<GBDeviceAdapterv2.Vi
         //snackbarView.setBackgroundColor(Color.MAGENTA);
         snackbar.show();
     }
+    public void makePhoneCall()
+    {
+        if(ContextCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions((Activity) context,
+                    new String[] {Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else{
+            String dial = "tel:" + "9910978336";
+            context.startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CALL ){
+            if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                makePhoneCall();
+            }else {
+                Toast.makeText(context, "Permission Denied",Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 }
+

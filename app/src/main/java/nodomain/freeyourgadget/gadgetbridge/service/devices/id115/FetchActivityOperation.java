@@ -86,7 +86,7 @@ public class FetchActivityOperation extends AbstractID115Operation {
 
         if (data[0] == ID115Constants.CMD_ID_HEALTH_DATA) {
             if (data[1] == (byte)0xEE) {
-                LOG.info("Activity data transfer has finished.");
+                LOG.info("activity data transfer has finished.");
                 parseAndStore();
                 operationFinished();
             } else {

@@ -262,9 +262,9 @@
     <string name="dbmanagementactivity_overwrite">Nadpisz</string>
     <string name="Cancel">Anuluj</string>
     <string name="Delete">Usuń</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">Wibracje</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="action_donate">Wspomóż</string>
     <string name="controlcenter_snackbar_need_longpress">Przytrzymaj aby rozłączyć</string>
     <string name="controlcenter_snackbar_disconnecting">Rozłączanie</string>

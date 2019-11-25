@@ -379,9 +379,9 @@
     <string name="dbmanagementactivity_overwrite">Überschreiben</string>
     <string name="Cancel">Abbrechen</string>
     <string name="Delete">Löschen</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">Vibration</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="title_activity_pebble_pairing">Pebble koppeln</string>
     <string name="pebble_pairing_hint">Auf deinem Android-Gerät erscheint ein Koppeln-Dialog. Wenn nicht, schaue in die Benachrichtigungsübersicht und akzeptiere die Kopplungsanforderung. Akzeptiere es auch danach auf deiner Pebble.</string>
     <string name="weather_notification_label">Stelle sicher, dass dieses Skin in der Wetterbenachrichtigungsapp aktiviert ist, damit du Wetterdaten auf deiner Pebble erhältst.

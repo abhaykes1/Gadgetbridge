@@ -220,8 +220,8 @@
     <string name="charts_legend_heartrate">심박수</string>
     <string name="live_activity_heart_rate">심박수</string>
     <string name="Delete">삭제</string>
-    <!--Strings related to Vibration Activity-->
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Vibration activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="action_donate">기부</string>
     <string name="controlcenter_delete_device">기기 제거</string>
     <string name="controlcenter_delete_device_name">%1$s 제거</string>

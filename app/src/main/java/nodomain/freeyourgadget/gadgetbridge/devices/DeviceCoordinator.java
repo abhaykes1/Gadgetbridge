@@ -120,7 +120,7 @@ public interface DeviceCoordinator {
     DeviceType getDeviceType();
 
     /**
-     * Returns the Activity class to be started in order to perform a pairing of a
+     * Returns the activity class to be started in order to perform a pairing of a
      * given device after its discovery.
      *
      * @return the activity class for pairing/initial authentication, or null if none
@@ -220,7 +220,7 @@ public interface DeviceCoordinator {
     boolean supportsAppsManagement();
 
     /**
-     * Returns the Activity class that will be used to manage device apps.
+     * Returns the activity class that will be used to manage device apps.
      *
      * @return
      */

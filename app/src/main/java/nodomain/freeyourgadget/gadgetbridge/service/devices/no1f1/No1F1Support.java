@@ -619,7 +619,7 @@ public class No1F1Support extends AbstractBTLEDeviceSupport {
                         }
                         provider.addGBActivitySample(samples.get(i));
                     }
-                    LOG.info("Activity data saved");
+                    LOG.info("activity data saved");
                     if (data[0] == No1F1Constants.CMD_FETCH_STEPS) {
                         sendFetchCommand(No1F1Constants.CMD_FETCH_SLEEP);
                     } else if (data[0] == No1F1Constants.CMD_FETCH_SLEEP) {

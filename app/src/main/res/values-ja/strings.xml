@@ -370,9 +370,9 @@
     <string name="dbmanagementactivity_overwrite">上書き</string>
     <string name="Cancel">キャンセル</string>
     <string name="Delete">削除</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">バイブレーション</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="title_activity_pebble_pairing">Pebbleペアリング</string>
     <string name="pebble_pairing_hint">お使いのAndroidデバイスでペアリングのダイアログがポップアップすると思います。 起こらない場合は、通知ドロワーを調べて、ペアリング要求を受け入れます。 その後、Pebbleでペアリング要求を受け入れます</string>
     <string name="weather_notification_label">天気予報アプリでこのスキンが有効になっていることを確認してください。\n\nここで必要な設定はありません。\n\nアプリ管理からPebbleのシステム天気アプリを有効にすることができます。\n\nサポートされているウォッチフェイスが自動的に天気を表示します。</string>

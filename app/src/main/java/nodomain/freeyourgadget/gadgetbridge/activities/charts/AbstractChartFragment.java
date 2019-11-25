@@ -550,11 +550,11 @@ public abstract class AbstractChartFragment extends AbstractGBFragment {
 
 
             List<ILineDataSet> lineDataSets = new ArrayList<>();
-            LineDataSet activitySet = createDataSet(activityEntries, akActivity.color, "Activity");
+            LineDataSet activitySet = createDataSet(activityEntries, akActivity.color, "activity");
             lineDataSets.add(activitySet);
-            LineDataSet deepSleepSet = createDataSet(deepSleepEntries, akDeepSleep.color, "Deep Sleep");
+            LineDataSet deepSleepSet = createDataSet(deepSleepEntries, akDeepSleep.color, "Deep sleep");
             lineDataSets.add(deepSleepSet);
-            LineDataSet lightSleepSet = createDataSet(lightSleepEntries, akLightSleep.color, "Light Sleep");
+            LineDataSet lightSleepSet = createDataSet(lightSleepEntries, akLightSleep.color, "Light sleep");
             lineDataSets.add(lightSleepSet);
             LineDataSet notWornSet = createDataSet(notWornEntries, akNotWorn.color, "Not worn");
             lineDataSets.add(notWornSet);

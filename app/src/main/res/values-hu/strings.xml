@@ -366,9 +366,9 @@
     <string name="dbmanagementactivity_overwrite">Felülírás</string>
     <string name="Cancel">Mégse</string>
     <string name="Delete">Törlés</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">Rezgés</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="title_activity_pebble_pairing">Pebble párosítása</string>
     <string name="pebble_pairing_hint">Egy párosítási párbeszédablaknak kéne megjelennie az Android eszközödön. Ha nem látod, nézd meg az értesítési sávban és fogadd el a párosítási kérelmet. Utána fogadd ela kérelmet a Pebble-n.</string>
     <string name="weather_notification_label">Bizonyosodj meg róla, hogy a skin támogatja-e az Időjárás értesítések megjelenítését. Nincs szükség konfigurációra. A Pebble app management-ben tudod engedélyezni a rendszer időjárás alkalmazását. Azok a skinek amik támogatják az időjárás értesítésket, automatikusan megfogják jeleníteni azt.</string>

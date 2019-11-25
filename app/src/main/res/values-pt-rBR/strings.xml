@@ -339,9 +339,9 @@
     <string name="dbmanagementactivity_overwrite">Sobrepor</string>
     <string name="Cancel">Cancelar</string>
     <string name="Delete">Excluir</string>
-    <!--Strings related to Vibration Activity-->
+    <!--Strings related to Vibration activity-->
     <string name="title_activity_vibration">Vibração</string>
-    <!--Strings related to Pebble Pairing Activity-->
+    <!--Strings related to Pebble Pairing activity-->
     <string name="title_activity_pebble_pairing">Pareamento do Pebble</string>
     <string name="pebble_pairing_hint">Um diálogo de pareamento vai aparecer no seu dispositivo Android. Se isso não acontecer, procure na gaveta de notificação e aceite o pedido de pareamento. Também aceite-o no seu Pebble em seguida.</string>
     <string name="weather_notification_label">Certifique-se de que esta capa está ativada no aplicativo Notificação de Clima para obter informações sobre o tempo em seu Pebble.

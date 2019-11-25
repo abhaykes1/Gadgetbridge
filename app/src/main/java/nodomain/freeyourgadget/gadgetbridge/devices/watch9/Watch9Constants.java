@@ -48,7 +48,7 @@ public final class Watch9Constants {
     //                              |     |     |     └ Response/Request indicator
     //                              |     |     └ Value length
     //                              |     |
-    //                              └-----└ Header
+    //                              └-----└ header
 
     public static final byte[] CMD_FIRMWARE_INFO                = new byte[]{0x01, 0x02};
     public static final byte[] CMD_AUTHORIZATION_TASK           = new byte[]{0x01, 0x05};

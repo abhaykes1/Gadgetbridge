@@ -43,6 +43,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.Utils;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,6 +66,11 @@ import nodomain.freeyourgadget.gadgetbridge.model.ActivitySample;
 import nodomain.freeyourgadget.gadgetbridge.model.ActivityUser;
 import nodomain.freeyourgadget.gadgetbridge.model.DeviceService;
 import nodomain.freeyourgadget.gadgetbridge.util.GB;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LiveActivityFragment extends AbstractChartFragment {
     private static final Logger LOG = LoggerFactory.getLogger(LiveActivityFragment.class);
@@ -172,6 +178,10 @@ public class LiveActivityFragment extends AbstractChartFragment {
         int heartRate = sample.getHeartRate();
         int timestamp = tsTranslation.shorten(sample.getTimestamp());
         if (HeartRateUtils.getInstance().isValidHeartRateValue(heartRate)) {
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            final  DatabaseReference myRef = database.getReference("message/heartRate");
+            myRef.setValue(heartRate);
+            LOG.info("HeartRate: " + heartRate);
             setCurrentHeartRate(heartRate, timestamp);
         }
         int steps = sample.getSteps();

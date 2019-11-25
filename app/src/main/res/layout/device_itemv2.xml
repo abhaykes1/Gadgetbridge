@@ -2,22 +2,27 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:background="@color/primary_light">
 
-    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
         android:foreground="?android:attr/selectableItemBackground"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="4dp"
-        card_view:contentPadding="8dp">
+        app:cardCornerRadius="32dp"
+        app:cardElevation="4dp"
+        app:contentPadding="16dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/id1">
 
             <RelativeLayout
                 android:id="@+id/device_item_infos_box"
@@ -49,7 +54,7 @@
                     android:clickable="true"
                     android:contentDescription="@string/controlcenter_delete_device"
                     android:tint="?attr/textColorTertiary"
-                    card_view:srcCompat="@drawable/ic_remove_device"
+                    app:srcCompat="@drawable/ic_remove_device"
                     android:focusable="true" />
             </RelativeLayout>
 
@@ -106,7 +111,7 @@
                 android:contentDescription="@string/candidate_item_device_image"
                 android:tint="@color/secondarytext"
                 android:background="?android:attr/selectableItemBackground"
-                card_view:srcCompat="@drawable/ic_more_vert"
+                app:srcCompat="@drawable/ic_more_vert"
                 android:focusable="true" />
 
             <LinearLayout
@@ -125,7 +130,7 @@
                     android:padding="4dp"
                     android:scaleType="fitXY"
                     android:tint="@color/secondarytext"
-                    card_view:srcCompat="@drawable/level_list_battery" />
+                    app:srcCompat="@drawable/level_list_battery" />
 
                 <TextView
                     android:id="@+id/battery_status"
@@ -155,7 +160,7 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_settings" />
+                app:srcCompat="@drawable/ic_settings" />
 
 
             <LinearLayout
@@ -174,7 +179,7 @@
                     android:padding="4dp"
                     android:scaleType="fitXY"
                     android:tint="@color/secondarytext"
-                    card_view:srcCompat="@drawable/ic_radio" />
+                    app:srcCompat="@drawable/ic_radio" />
 
                 <TextView
                     android:id="@+id/fm_frequency"
@@ -199,7 +204,7 @@
                 android:clickable="true"
                 android:padding="4dp"
                 android:scaleType="fitXY"
-                card_view:srcCompat="@drawable/ic_led_color"
+                app:srcCompat="@drawable/ic_led_color"
                 android:focusable="true" />
 
             <LinearLayout
@@ -223,7 +228,7 @@
                     android:contentDescription="@string/controlcenter_fetch_activity_data"
                     android:scaleType="fitXY"
                     android:tint="@color/secondarytext"
-                    card_view:srcCompat="@drawable/ic_action_fetch_activity_data"
+                    app:srcCompat="@drawable/ic_action_fetch_activity_data"
                     android:focusable="true" />
 
                 <ProgressBar
@@ -250,7 +255,7 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_screenshot"
+                app:srcCompat="@drawable/ic_screenshot"
                 android:focusable="true" />
 
             <ImageView
@@ -266,7 +271,7 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_action_manage_apps"
+                app:srcCompat="@drawable/ic_action_manage_apps"
                 android:focusable="true" />
 
             <ImageView
@@ -282,24 +287,69 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_device_set_alarms"
+                app:srcCompat="@drawable/ic_device_set_alarms"
                 android:focusable="true" />
 
             <ImageView
                 android:id="@+id/device_action_show_activity_graphs"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_below="@id/device_image"
-                android:layout_margin="4dp"
-                android:layout_toEndOf="@id/device_action_set_alarms"
+                android:layout_width="311dp"
+                android:layout_height="114dp"
+                android:layout_below="@+id/device_led_color"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="199dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:contentDescription="@string/controlcenter_start_activitymonitor"
+                android:focusable="true"
                 android:padding="4dp"
                 android:scaleType="fitXY"
-                android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_activity_graphs"
-                android:focusable="true" />
+                app:srcCompat="@drawable/activity" />
+
+            <ImageView
+                android:id="@+id/getHeart"
+                android:layout_width="329dp"
+                android:layout_height="96dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="329dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/heartrate"
+                tools:srcCompat="@drawable/heartrate"></ImageView>
+
+            <ImageView
+                android:id="@+id/sleepBtn"
+                android:layout_width="312dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="100dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/sleep"
+                tools:srcCompat="@drawable/sleep"></ImageView>
+
+            <ImageView
+                android:id="@+id/contact"
+                android:layout_width="312dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/contact"
+                tools:srcCompat="@drawable/contact"></ImageView>
 
             <ImageView
                 android:id="@+id/device_action_show_activity_tracks"
@@ -314,7 +364,7 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_activity_tracks"
+                app:srcCompat="@drawable/ic_activity_tracks"
                 android:focusable="true" />
 
             <ImageView
@@ -329,7 +379,7 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_action_find_lost_device"
+                app:srcCompat="@drawable/ic_action_find_lost_device"
                 android:focusable="true" />
 
             <ImageView
@@ -344,12 +394,20 @@
                 android:padding="4dp"
                 android:scaleType="fitXY"
                 android:tint="@color/secondarytext"
-                card_view:srcCompat="@drawable/ic_activity_unknown"
+                app:srcCompat="@drawable/ic_activity_unknown"
                 android:focusable="true" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+
+    <!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:srcCompat="@drawable/activity"-->
+<!--        tools:srcCompat="@drawable/activity"></ImageView>-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

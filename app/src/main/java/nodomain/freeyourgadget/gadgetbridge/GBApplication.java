@@ -559,7 +559,7 @@ public class GBApplication extends Application {
     }
 
     /**
-     * Deletes both the old Activity database and the new one recreates it with empty tables.
+     * Deletes both the old activity database and the new one recreates it with empty tables.
      *
      * @return true on successful deletion
      */
@@ -574,7 +574,7 @@ public class GBApplication extends Application {
     }
 
     /**
-     * Deletes the legacy (pre 0.12) Activity database
+     * Deletes the legacy (pre 0.12) activity database
      *
      * @return true on successful deletion
      */

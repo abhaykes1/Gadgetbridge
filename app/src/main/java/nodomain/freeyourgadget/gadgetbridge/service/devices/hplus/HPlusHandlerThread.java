@@ -389,7 +389,7 @@ class HPlusHandlerThread extends GBDeviceIoThread {
             HPlusHealthActivityOverlayDao overlayDao = session.getHPlusHealthActivityOverlayDao();
             HPlusHealthSampleProvider provider = new HPlusHealthSampleProvider(getDevice(), dbHandler.getDaoSession());
 
-            //Get the individual Sleep overlays and insert them
+            //Get the individual sleep overlays and insert them
             List<HPlusHealthActivityOverlay> overlayList = new ArrayList<>();
             List<HPlusDataRecord.RecordInterval> intervals = record.getIntervals();
 

@@ -42,32 +42,32 @@ public class HPlusDataRecordSleep extends HPlusDataRecord {
     public int bedTimeEnd;
 
     /**
-     * Number of minutes in Deep Sleep
+     * Number of minutes in Deep sleep
      */
     public int deepSleepMinutes;
 
     /**
-     * Number of minutes in Light Sleep
-     * This is considered as Light Sleep
+     * Number of minutes in Light sleep
+     * This is considered as Light sleep
 
      */
     public int lightSleepMinutes;
 
     /**
      * Number of minutes to start sleeping (??)
-     * This is considered as Light Sleep
+     * This is considered as Light sleep
      */
     public int enterSleepMinutes;
 
     /**
-     * Number of minutes with Sleep Spindles (??)
-     * This is considered as Light Sleep
+     * Number of minutes with sleep Spindles (??)
+     * This is considered as Light sleep
      */
     public int spindleMinutes;
 
     /**
      * Number of minutes in REM sleep
-     * This is considered as Light Sleep
+     * This is considered as Light sleep
 
      */
     public int remSleepMinutes;
@@ -140,6 +140,6 @@ public class HPlusDataRecordSleep extends HPlusDataRecord {
         Calendar end = GregorianCalendar.getInstance();
         end.setTimeInMillis(bedTimeEnd * 1000L);
 
-        return String.format(Locale.US, "Sleep start: %s end: %s enter: %d spindles: %d rem: %d deep: %d wake: %d-%d", s.getTime(), end.getTime(), enterSleepMinutes, spindleMinutes, remSleepMinutes, deepSleepMinutes, wakeupMinutes, wakeupCount);
+        return String.format(Locale.US, "sleep start: %s end: %s enter: %d spindles: %d rem: %d deep: %d wake: %d-%d", s.getTime(), end.getTime(), enterSleepMinutes, spindleMinutes, remSleepMinutes, deepSleepMinutes, wakeupMinutes, wakeupCount);
     }
 }
