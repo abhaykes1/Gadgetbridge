@@ -1,7 +1,7 @@
 /*  Copyright (C) 2015-2019 0nse, Andreas Böhler, Andreas Shimokawa, Carsten
-    Pfeiffer, Daniele Gobbetti, Jean-François Greffier, João Paulo Barraca,
-    José Rebelo, Kranz, ladbsoft, maxirnilian, protomors, Quallenauge, Sami
-    Alaoui, Sophanimus, tiparega, Vadim Kaushan
+    Pfeiffer, Cre3per, Daniele Gobbetti, Jean-François Greffier, João Paulo
+    Barraca, José Rebelo, Kranz, ladbsoft, Manuel Ruß, maxirnilian, protomors,
+    Quallenauge, Sami Alaoui, Sophanimus, tiparega, Vadim Kaushan
 
     This file is part of Gadgetbridge.
 
@@ -46,6 +46,8 @@ import nodomain.freeyourgadget.gadgetbridge.devices.hplus.EXRIZUK8Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.hplus.HPlusCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.hplus.MakibesF68Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.huami.amazfitbip.AmazfitBipLiteCoordinator;
+import nodomain.freeyourgadget.gadgetbridge.devices.huami.amazfitgtr.AmazfitGTRCoordinator;
+import nodomain.freeyourgadget.gadgetbridge.devices.huami.amazfitgts.AmazfitGTSCoordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.makibeshr3.MakibesHR3Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.hplus.Q8Coordinator;
 import nodomain.freeyourgadget.gadgetbridge.devices.huami.amazfitbip.AmazfitBipCoordinator;
@@ -207,6 +209,8 @@ public class DeviceHelper {
         result.add(new AmazfitBipLiteCoordinator());
         result.add(new AmazfitCorCoordinator());
         result.add(new AmazfitCor2Coordinator());
+        result.add(new AmazfitGTRCoordinator());
+        result.add(new AmazfitGTSCoordinator());
         result.add(new MiBand3Coordinator());
         result.add(new MiBand4Coordinator());
         result.add(new MiBand2HRXCoordinator());

@@ -1,4 +1,5 @@
-/*  Copyright (C) 2016-2019 Andreas Shimokawa
+/*  Copyright (C) 2016-2019 Andreas Shimokawa, Carsten Pfeiffer, Daniele
+    Gobbetti, HardLight, José Rebelo
 
     This file is part of Gadgetbridge.
 
@@ -89,6 +90,7 @@ public class MiBand4Coordinator extends HuamiCoordinator {
         return new int[]{
                 R.xml.devicesettings_miband3,
                 R.xml.devicesettings_wearlocation,
+                R.xml.devicesettings_custom_emoji_font,
                 R.xml.devicesettings_dateformat,
                 R.xml.devicesettings_nightmode,
                 R.xml.devicesettings_liftwrist_display,

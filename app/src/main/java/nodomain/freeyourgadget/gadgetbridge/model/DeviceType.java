@@ -1,7 +1,7 @@
 /*  Copyright (C) 2015-2019 Andreas Böhler, Andreas Shimokawa, Carsten
-    Pfeiffer, Daniele Gobbetti, Jean-François Greffier, João Paulo Barraca,
-    José Rebelo, Kranz, ladbsoft, maxirnilian, protomors, Quallenauge, Sami
-    Alaoui, Sebastian Kranz, Sophanimus, tiparega, Vadim Kaushan
+    Pfeiffer, Cre3per, Daniele Gobbetti, Jean-François Greffier, João Paulo
+    Barraca, José Rebelo, Kranz, ladbsoft, Manuel Ruß, maxirnilian, protomors,
+    Quallenauge, Sami Alaoui, Sebastian Kranz, Sophanimus, tiparega, Vadim Kaushan
 
     This file is part of Gadgetbridge.
 
@@ -40,6 +40,8 @@ public enum DeviceType {
     AMAZFITCOR2(15, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_amazfit_cor2),
     MIBAND4(16, R.drawable.ic_device_miband2, R.drawable.ic_device_miband2_disabled, R.string.devicetype_miband4),
     AMAZFITBIP_LITE(17, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_amazfit_bip_lite),
+    AMAZFITGTR(18, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_amazfit_gtr),
+    AMAZFITGTS(19, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_amazfit_gts),
     VIBRATISSIMO(20, R.drawable.ic_device_lovetoy, R.drawable.ic_device_lovetoy_disabled, R.string.devicetype_vibratissimo),
     LIVEVIEW(30, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_liveview),
     HPLUS(40, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_hplus),
