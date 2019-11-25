@@ -105,4 +105,19 @@ Feel free to open an issue on our issue tracker, but please:
 4. File an issue at https://github.com/Freeyourgadget/Gadgetbridge/issues/new and possibly provide the logfile
 
 Alternatively you may use the standard logcat functionality to access the log.
+## Additional Changes
+
+0. Updated UI of dashboard.
+1. Added additional features like syncronization of heart beat with firebase database and emergency contact calling feature.
+2. Added two activities of last recorded heart beat and sleep chart.
+
+![dashboard](https://user-images.githubusercontent.com/35130239/69540018-b2b12700-0fab-11ea-8f98-150a94e3f9e2.jpeg)
+
+![chart](https://user-images.githubusercontent.com/35130239/69540044-c6f52400-0fab-11ea-8dd4-0f61852b8aca.jpeg)
+
+![heartBeat](https://user-images.githubusercontent.com/35130239/69540066-d3797c80-0fab-11ea-85c6-b8fbc841c50d.jpeg)
+
+![sleep](https://user-images.githubusercontent.com/35130239/69540090-decca800-0fab-11ea-8e95-f174a442cf70.jpeg)
+
+
 
